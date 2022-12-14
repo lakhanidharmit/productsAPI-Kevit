@@ -1,7 +1,7 @@
 {
   "name": "products-api",
   "version": "1.0.0",
-  "description": "A sample project for interview process at Kevit Technologies",
+  "description": "a project for interview process at Kevit Technologies",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -20,8 +20,8 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.8.0",
-    "mongoose-sequence": "^5.3.1"
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.27.0"
   },
   "devDependencies": {
     "bluebird": "^3.7.2",

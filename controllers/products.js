@@ -1,4 +1,5 @@
-const Product = require("../models/products.model");
+const db = require('../models');
+const Product = db.product;
 
 exports.newProduct = async (req,res)=>{
     try{
@@ -25,7 +26,7 @@ exports.newProduct = async (req,res)=>{
 
 exports.getAllProducts = async (req,res)=>{
     try{
-        const products = await Product.find();
+        const products = await Product.findAll();
     
         res.status(200).send(products);
     
@@ -55,10 +56,10 @@ exports.updateProduct = async (req,res)=>{
         product.stock = req.body.stock ? req.body.stock : product.stock,
         product.isPublished = req.body.isPublished ? req.body.isPublished : product.isPublished
 
-        const updatedProduct = await product.save();
+        const updatedProduct = await product.update();
 
         console.log(`#### Product '${updatedProduct.name}' data updated ####`);
-        res.status(200).send(updatedProduct);
+        res.status(204).send(updatedProduct);
 
     }catch(err){
         console.log("#### Error while updating product data #### ", err.message);

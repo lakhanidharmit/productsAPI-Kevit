@@ -1,5 +1,13 @@
 require('dotenv').config();
 
-module.exports = {
-    DB_URL : process.env.DB_URL
+const development = {
+    database: process.env.DB_DEV,
+    username: process.env.DB_DEV_USERNAME,
+    password: process.env.DB_DEV_PASS,
+    dialectInformation:{
+        host:process.env.DB_DEV_HOST,
+        dialect:process.env.DB_DEV_DIALECT
+    }
 }
+
+module.exports = {development}
