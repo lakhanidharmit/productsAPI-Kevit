@@ -1,4 +1,4 @@
-const productController = require('../controllers/product.controller')
+const productController = require('../controllers/products.controller')
 // const {authJwt, validateIdInParams, validateTheatreRequestBodies} = require('../middlewares')
  
 module.exports = (app)=>{
