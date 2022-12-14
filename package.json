@@ -1,0 +1,31 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "description": "A sample project for interview process at Kevit Technologies",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npx jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakhanidharmit/productsAPI-Kevit.git"
+  },
+  "author": "Dharmit Lakhani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lakhanidharmit/productsAPI-Kevit/issues"
+  },
+  "homepage": "https://github.com/lakhanidharmit/productsAPI-Kevit#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.7.2",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "jasmine": "^4.5.0"
+  }
+}
