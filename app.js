@@ -17,7 +17,7 @@ db.once("open",()=>{
     console.log("#### Connected to mongoDB ####");
 });
 
-// require('./routes/products.routes')(app);
+require('./routes/products.routes')(app);
 
 app.listen(serverConfig.PORT,()=>{
     console.log(`#### connected to server at port no.: ${serverConfig.PORT} ####`);
