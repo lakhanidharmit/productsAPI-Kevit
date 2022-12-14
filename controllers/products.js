@@ -48,18 +48,19 @@ exports.getSingleProduct = async (req,res)=>{
 
 exports.updateProduct = async (req,res)=>{
     try{
-        const product = req.productInParams; //from middleware
 
-        product.name = req.body.name ? req.body.name : product.name,
-        product.price = req.body.price ? req.body.price : product.price,
-        product.mrp = req.body.mrp ? req.body.mrp : product.mrp,
-        product.stock = req.body.stock ? req.body.stock : product.stock,
-        product.isPublished = req.body.isPublished ? req.body.isPublished : product.isPublished
+        const product = {
+            name: req.body.name,
+            price: req.body.price,
+            mrp: req.body.mrp,
+            stock: req.body.stock,
+            isPublished : req.body.isPublished
+        }
 
-        const updatedProduct = await product.update();
+        await Product.update(product,{where: {id:req.params.id}});
 
-        console.log(`#### Product '${updatedProduct.name}' data updated ####`);
-        res.status(204).send(updatedProduct);
+        console.log(`#### Product data updated ####`);
+        res.status(204).send();
 
     }catch(err){
         console.log("#### Error while updating product data #### ", err.message);

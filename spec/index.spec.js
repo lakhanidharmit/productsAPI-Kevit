@@ -3,7 +3,9 @@ const chaiHttp = require('chai-http');
 const server = require('../app');
 const should = chai.should();
 const BlueBird = require('bluebird');
-const Products = require('../models/products');
+const db = require('../models');
+const Products = db.product;
+// const Products = require('../models/products');
 
 chai.use(chaiHttp);
 

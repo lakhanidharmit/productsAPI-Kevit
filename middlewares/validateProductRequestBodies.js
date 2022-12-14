@@ -1,20 +1,12 @@
 const newProductBody = (req,res,next)=>{
     try{
-        if (!req.body.name) {
-            return res.status(400).send({
-                message: "Failed ! Product name is not provided"
-            });
-        }else if (typeof req.body.name !== "string"){
+        if (typeof req.body.name !== "string"){
             return res.status(400).send({
                 message: "Failed ! Product name is not in correct format (String)"
             });
         }
     
-        if (!req.body.price) {
-            return res.status(400).send({
-                message: "Failed ! Product price is not provided"
-            });
-        }else if (typeof req.body.price !== "number"){
+        if (typeof req.body.price !== "number"){
             return res.status(400).send({
                 message: "Failed ! Product price is not in correct format (Number)"
             });
@@ -24,11 +16,7 @@ const newProductBody = (req,res,next)=>{
             });
         }
 
-        if (!req.body.mrp) {
-            return res.status(400).send({
-                message: "Failed ! Product MRP is not provided"
-            });
-        }else if (typeof req.body.mrp !== "number"){
+        if (typeof req.body.mrp !== "number"){
             return res.status(400).send({
                 message: "Failed ! Product MRP is not in correct format (Number)"
             });
@@ -38,11 +26,7 @@ const newProductBody = (req,res,next)=>{
             });
         }
 
-        if (!req.body.stock) {
-            return res.status(400).send({
-                message: "Failed ! Product stock is not provided"
-            });
-        }else if (typeof req.body.stock !== "number"){
+        if (typeof req.body.stock !== "number"){
             return res.status(400).send({
                 message: "Failed ! Product stock is not in correct format (Number)"
             });
@@ -85,8 +69,7 @@ const updateProductBody = async (req,res,next)=>{
             }
         }
 
-
-        if (req.body.mpr){
+        if (req.body.mrp){
             if (typeof req.body.mrp !== "number"){
                 return res.status(400).send({
                     message: "Failed ! Product MRP is not in correct format (Number)"

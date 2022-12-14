@@ -5,7 +5,7 @@ const productInParams = async (req,res,next)=>{
 
     try{
 
-        const product = await Product.findbyPk({id : req.params.id});
+        const product = await Product.findByPk(req.params.id);
 
         if(!product){
             return res.status(400).send({

@@ -6,7 +6,10 @@ const development = {
     password: process.env.DB_DEV_PASS,
     dialectInformation:{
         host:process.env.DB_DEV_HOST,
-        dialect:process.env.DB_DEV_DIALECT
+        dialect:process.env.DB_DEV_DIALECT,
+        define: {
+            timestamps: false
+        }
     }
 }
 

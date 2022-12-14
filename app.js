@@ -13,6 +13,6 @@ db.sequelize.sync({force:true}).then(()=>{
 
 require('./routes/products')(app);
 
-app.listen(serverConfig.PORT,()=>{
+module.exports = app.listen(serverConfig.PORT,()=>{
     console.log(`#### connected to server at port no.: ${serverConfig.PORT} ####`);
 })

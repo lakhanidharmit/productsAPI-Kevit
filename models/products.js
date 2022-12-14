@@ -10,12 +10,12 @@ module.exports = (sequelize,Sequelize) => {
             allownull: false
         },
         price:{
-            type:Sequelize.INTEGER,
+            type: Sequelize.DECIMAL(10,2),
             min: 0,
             allownull: false
         },
         mrp:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.DECIMAL(10,2),
             min: 0,
             allownull: false
         },
@@ -26,7 +26,7 @@ module.exports = (sequelize,Sequelize) => {
         },
         isPublished:{
             type:Sequelize.BOOLEAN,
-            default: false
+            defaultValue: false
         }
     },
     {
