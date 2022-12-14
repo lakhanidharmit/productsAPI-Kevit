@@ -7,6 +7,9 @@ const development = {
     dialectInformation:{
         host:process.env.DB_DEV_HOST,
         dialect:process.env.DB_DEV_DIALECT,
+        dialectOptions:{
+            decimalNumbers: true
+        },
         define: {
             timestamps: false
         }

@@ -1,5 +1,9 @@
 module.exports = (sequelize,Sequelize) => {
     const Product = sequelize.define("product",{
+        isPublished:{
+            type:Sequelize.BOOLEAN,
+            defaultValue: false
+        },
         id:{
             type:Sequelize.INTEGER,
             primaryKey: true,
@@ -24,10 +28,6 @@ module.exports = (sequelize,Sequelize) => {
             min: 0,
             allownull: false
         },
-        isPublished:{
-            type:Sequelize.BOOLEAN,
-            defaultValue: false
-        }
     },
     {
         tableName:'products'
